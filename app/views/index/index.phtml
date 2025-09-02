@@ -1,5 +1,8 @@
 <h1>Index</h1>
 <hr>
 <?php
-echo 'Action index';
+foreach($this->view->datas as $index => $product){
+    echo $product['id'].' - '.$product['description'].' - '.$product['price'];
+    echo "<br />";
+}
 ?>
