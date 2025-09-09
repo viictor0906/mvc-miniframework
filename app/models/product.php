@@ -1,14 +1,9 @@
 <?php
 namespace app\models;
 
+use mini\model\Model;
 
-class Product{
-    protected $db;
-
-    public function __construct(\PDO $db){
-        $this->db = $db;
-    }
-
+class Product extends Model{
     public function getProducts(){
         $query = "select id, description, price from products";
         return $this->db->query($query)->fetchAll();
